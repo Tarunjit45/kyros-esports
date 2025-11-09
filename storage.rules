@@ -1,0 +1,27 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      // Allow read access to all users
+      allow read: if true;
+      
+      // Only authenticated users can upload files
+      allow create: if request.auth != null;
+      
+      // Only the uploader can update or delete their files
+      allow update, delete: if request.auth != null && 
+        resource.metadata.owner == request.auth.uid;
+    }
+    
+    // More specific rules for different paths
+    match /profilePictures/{userId}/{fileName} {
+      allow read: if true;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    match /eventImages/{eventId}/{fileName} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+  }
+}
