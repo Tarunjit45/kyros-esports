@@ -1,72 +1,57 @@
-# 🚀 kyros-esports
+# 🎮 Kyros Esports — Tournament Management & Gaming Platform
 
-![Language](https://img.shields.io/badge/Language-JavaScript-blue?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Status](https://img.shields.io/badge/Production-Active-success?style=for-the-badge)
+[![React](https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Firebase](https://img.shields.io/badge/Backend-Firebase%20Firestore-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4+-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-## 📌 Overview
+**Kyros Esports** is an all-in-one gaming community and competitive tournament platform. Built with **React** and backed by **Firebase Firestore**, it empowers organizers to host competitive esports tournaments, track live match brackets, manage player registrations, and publish gaming news.
 
-An Esports Platform for the gamers
+---
 
-## ✨ Key Features & Architecture
+## ✨ Features
 
-- **High-Performance Codebase:** Built using `JavaScript` and modern engineering principles.
-- **Modular & Scalable Design:** Structured directory tree for seamless development and deployment.
-- **Modern Responsive Styling:** Custom UI design system engineered for mobile & desktop clarity.
+* 🏆 **Tournament Bracket Management:** Real-time single-elimination and round-robin tournament schedules.
+* 👥 **Team Roster & Player Profiles:** Clan management, player statistics, and match history tracking.
+* 🔥 **Live Match Leaderboards:** Automated leaderboard score recalculation backed by Firestore real-time snapshots.
+* 📝 **Community News & Patch Notes:** Integrated rich text editor (`@tinymce/tinymce-react`) for game updates and announcements.
 
-## 🛠️ Tech Stack & Dependencies
+---
 
-- **Core Language:** `JavaScript`
-- **Libraries & Tools:** React 18, Tailwind CSS, JavaScript
-- **Deployment Infrastructure:** Vercel Edge / Cloud Services
-
-## 📁 Architecture & File Layout
+## 📁 Repository Structure
 
 ```text
 kyros-esports/
-├── .env.example
-├── .github
-├── .github/ISSUE_TEMPLATE
-├── .github/ISSUE_TEMPLATE/bug_report.md
-├── .github/ISSUE_TEMPLATE/feature_request.md
-├── .github/PULL_REQUEST_TEMPLATE.md
-├── .github/workflows
-├── .github/workflows/ci.yml
-├── .gitignore
-├── CODE_OF_CONDUCT.md
-├── CONTRIBUTING.md
-├── LICENSE
-├── README.md
-├── SETUP.md
-├── firebase.json
-└── ... [additional codebase files]
+├── src/                # Tournament views, bracket charts, player registration forms
+├── firestore.rules     # Secure Firestore access control rules
+├── firebase.json       # Firebase hosting & index configurations
+├── SETUP.md            # Step-by-step setup and deployment manual
+├── package.json        # Dependencies & scripts
+├── LICENSE             # MIT License
+└── README.md
 ```
 
-## 🚀 Quickstart & Installation
+---
 
-### Prerequisites
-- Node.js (v18.0.0 or higher)
-- npm or yarn package manager
+## 🚀 Getting Started
 
-### Setup Instructions
+### 1. Installation
+```bash
+git clone https://github.com/Tarunjit45/kyros-esports.git
+cd kyros-esports
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Tarunjit45/kyros-esports.git
-   cd kyros-esports
-   ```
+npm install
+```
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+### 2. Configure Firebase
+Provide your Firebase keys in `.env` (refer to `SETUP.md` for full instructions).
 
-3. **Launch development server:**
-   ```bash
-   npm run dev
-   ```
+### 3. Run Development Server
+```bash
+npm start
+```
 
-## 📜 Author & License
+---
 
-Architected & Developed by **[Tarunjit Biswas](https://github.com/Tarunjit45)**.  
-Distributed under the **MIT License**.
+## 📄 License
+This project is licensed under the [MIT License](LICENSE).
